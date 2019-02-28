@@ -39,6 +39,20 @@ public class Main {
 	}
 	
 	public static boolean checkAnswer(int answer) {
-		return true;
+		
+		//카운트 증가
+		count++;
+		
+		if(randomNumber<answer && answer < max) {	//max수정
+			max=answer;
+		}else if(randomNumber>answer && answer > min) {	//min수정
+			min=answer;
+		}
+		
+		if(randomNumber==answer) {
+			return true;	
+		}else {
+			return false;
+		}
 	}
 }
